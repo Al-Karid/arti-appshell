@@ -1,10 +1,18 @@
 // composables/useModals.ts
-import { initModals } from "flowbite";
+import { initDrawers, initModals } from "flowbite";
 
 export const useFlowbiteModals = () => {
     onMounted(() => {
         useFlowbite(() => {
             initModals();
+        });
+    })
+}
+
+export const useFlowbiteDrawers = () => {
+    onMounted(() => {
+        useFlowbite(() => {
+            initDrawers();
         });
     })
 }

@@ -23,21 +23,24 @@ const navigation = computed(() => ({
         {
           title: "Demandes en cours",
           link: "/missions?listing=requested",
-          icon: "tabler:chevron-right",
+          icon: "tabler:circle",
+          iconSize: 12,
           badge: 0,
           collapsible: false,
         },
         {
           title: "Demandes différées",
           link: "/missions?listing=returned",
-          icon: "tabler:chevron-right",
+          icon: "tabler:circle",
           badge: 0,
+          iconSize: 12,
           collapsible: false,
         },
         {
           title: "Historique",
           link: "/missions?listing=requested-history",
-          icon: "tabler:chevron-right",
+          icon: "tabler:circle",
+          iconSize: 12,
           badge: 0,
           collapsible: false,
         },
@@ -54,7 +57,8 @@ const navigation = computed(() => ({
         {
           title: "Fiches de mission",
           link: "/missions?listing=approved",
-          icon: "tabler:chevron-right",
+          icon: "tabler:circle",
+          iconSize: 12,
           collapsible: false,
         },
       ],
@@ -70,7 +74,8 @@ const navigation = computed(() => ({
         {
           title: "Localités",
           link: "/admin/locations",
-          icon: "tabler:chevron-right",
+          icon: "tabler:circle",
+          iconSize: 12,
           collapsible: false,
         },
       ],
@@ -87,19 +92,19 @@ const navigation = computed(() => ({
       <div class="overflow-y-auto px-3 h-full bg-white dark:bg-gray-800">
         <!-- Menu items -->
         <ul v-if="isAdmin || can('manage', 'missions')" class="mt-5 space-y-2">
-          <DrawerItem v-for="item in navigation.create" :key="item.title" :item="item" />
+          <NavigationDrawerItem v-for="item in navigation.create" :key="item.title" :item="item" />
         </ul>
         <ul v-if="isAdmin || can('manage', 'missions')"
           class="pt-5 mt-5 space-y-2 border-t border-gray-200 dark:border-gray-700">
-          <DrawerItemCollapsible v-for="item in navigation.userSpace" :key="item.link" :item="item" />
+          <NavigationDrawerItemCollapsible v-for="item in navigation.userSpace" :key="item.link" :item="item" />
         </ul>
         <ul v-if="isAdmin || can('manage', 'missions') || can('manage', 'members')"
           class="pt-5 mt-5 space-y-2 border-t border-gray-200 dark:border-gray-700">
-          <DrawerItemCollapsible v-for="item in navigation.editSpace" :key="item.link" :item="item" />
+          <NavigationDrawerItemCollapsible v-for="item in navigation.editSpace" :key="item.link" :item="item" />
         </ul>
         <ul v-if="isAdmin"
           class="pt-5 mt-5 space-y-2 border-t border-gray-200 dark:border-gray-700">
-          <DrawerItemCollapsible v-for="item in navigation.adminSpace" :key="item.link" :item="item" />
+          <NavigationDrawerItemCollapsible v-for="item in navigation.adminSpace" :key="item.link" :item="item" />
         </ul>
       </div>
 

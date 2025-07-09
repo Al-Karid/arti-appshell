@@ -42,3 +42,13 @@ export interface UserPermissions {
   user: User;
   roles: Role[];
 }
+
+export interface Approver {
+  id?: number;
+  username: string;
+  fullname: string;
+  email: string;
+  title?: string;
+  delegate?: string;
+  step: number;
+}

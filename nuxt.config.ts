@@ -7,6 +7,6 @@ export default defineNuxtConfig({
     appshellCoockieName: "appshell-auth",
     appshellAuthStateName: "appshell-auth",
     appshellAuthBaseUrl: "http://se.arti.local:4000",
-    appshellAuthUrl: "/api/auth/login"
+    appshellAuthUrl: "/api/auth/login-dev"
   }
 })

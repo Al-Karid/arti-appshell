@@ -30,7 +30,7 @@ const { isLoggedIn, user } = useAuth();
         </div>
 
         <div class="flex items-center lg:order-2">
-          <NavigationUserProfile v-if="true" />
+          <NavigationUserProfile v-if="isLoggedIn" />
         </div>
       </div>
     </nav>

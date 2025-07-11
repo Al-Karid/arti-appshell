@@ -1,7 +1,10 @@
 {
-  "name": "nuxt-app",
-  "private": true,
+  "name": "@al-karid/arti-appshell",
+  "version": "1.0.1",
+  "description": "A Nuxt app shell with layout and auth",
   "type": "module",
+  "license": "MIT",
+  "private": false,
   "scripts": {
     "build": "nuxt build",
     "dev": "nuxt dev",
@@ -9,12 +12,15 @@
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare"
   },
-  "dependencies": {
+  "peerDependencies": {
     "@nuxt/icon": "^1.15.0",
     "@nuxtjs/tailwindcss": "^6.14.0",
-    "flowbite": "^3.1.2",
-    "nuxt": "^3.17.6",
-    "vue": "^3.5.17",
-    "vue-router": "^4.5.1"
+    "nuxt": "^3.17.6"
+  },
+  "devDependencies": {
+    "@nuxt/devtools": "^2.6.2"
+  },
+  "dependencies": {
+    "flowbite": "^3.1.2"
   }
 }
